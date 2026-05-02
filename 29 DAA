@@ -1,0 +1,27 @@
+import itertools
+
+def assignment(cost):
+    n = len(cost)
+    min_cost = float('inf')
+    best = None
+    
+    for perm in itertools.permutations(range(n)):
+        total = sum(cost[i][perm[i]] for i in range(n))
+        
+        if total < min_cost:
+            min_cost = total
+            best = perm
+    
+    result = [(i+1, best[i]+1) for i in range(n)]
+    return result, min_cost
+
+# Test
+cost = [
+    [3,10,7],
+    [8,5,12],
+    [4,6,9]
+]
+
+res, c = assignment(cost)
+print("Optimal Assignment:", res)
+print("Total Cost:", c)
