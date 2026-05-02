@@ -1,0 +1,10 @@
+def unique(a):
+    res = []
+    for x in a:
+        if x not in res:
+            res.append(x)
+    return res
+
+print("Output:", unique([3,7,3,5,2,5,9,2]))
+print("Output:", unique([-1,2,-1,3,2,-2]))
+print("Output:", unique([1000000,999999,1000000]))
