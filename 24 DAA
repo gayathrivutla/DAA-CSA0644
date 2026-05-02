@@ -1,0 +1,13 @@
+def substring_words(words):
+    result = []
+    for i in range(len(words)):
+        for j in range(len(words)):
+            if i != j and words[i] in words[j]:
+                result.append(words[i])
+                break
+    return result
+
+# Test
+print(substring_words(["mass","as","hero","superhero"]))
+print(substring_words(["leetcode","et","code"]))
+print(substring_words(["blue","green","bu"]))
