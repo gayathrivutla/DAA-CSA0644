@@ -1,0 +1,10 @@
+def find_max(a):
+    m = a[0]
+    for x in a:
+        if x > m:
+            m = x
+    return m
+
+print("Output:", find_max([1,2,3,4,5]))
+print("Output:", find_max([7,7,7,7,7]))
+print("Output:", find_max([-10,2,3,-4,5]))
