@@ -1,0 +1,9 @@
+def sort_max(a):
+    if not a:
+        return None
+    a.sort()
+    return a[-1]
+
+print("Output:", sort_max([]))
+print("Output:", sort_max([5]))
+print("Output:", sort_max([3,3,3,3,3]))
